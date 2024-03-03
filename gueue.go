@@ -1,7 +1,7 @@
-package gueue
+package main
 
 import (
-	"gueue/timeconv"
+	"github.com/discoriver/gueue/pkg/timeconv"
 	"time"
 )
 
@@ -28,6 +28,6 @@ func (t *MessageTimestamp) MarshalJSON() ([]byte, error) {
 
 type Message struct {
 	Timestamp MessageTimestamp `json:"timestamp"`
-	Topic     []byte           `json:"topic"`
+	Topic     string           `json:"topic"`
 	Payload   any              `json:"payload"`
 }
